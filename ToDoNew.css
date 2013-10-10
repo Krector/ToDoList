@@ -57,15 +57,19 @@ input {
 .TaskList {
     color: #4d4d4d;
 	background-color: #fff;
+    clear: both;
 
 }
 
+/*
 ul.TaskList li:before
 {
     content: '\2713';
-    margin: 0 1em;
+    margin: 0 .5em;
+    
     color: red;
 }
+*/
 
 .StatusElements {
     width: 558px;
@@ -111,3 +115,23 @@ ul.TaskList li:before
 
 .ToDoListInfo a  {
     color: #c9c9c9;
+}
+
+.ToggleAllStatus, .InputLine {
+    float: left;
+}
+
+.ToggleAllStatus {
+    margin-top: 20px;
+    margin-left: 20px;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    transform:scale(2);
+    -ms-transform:scale(2); /* IE 9 */
+    -webkit-transform:scale(2); /* Safari and Chrome */
+}
+
+.complete {
+    text-decoration: line-through;
+}
