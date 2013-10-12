@@ -17,30 +17,29 @@
         
         <form>
             <div class="ListInput">
-                <span class="ToggleAllStatus">&raquo</span>
-                <input class="InputLine" id="Task" type="text"      placeholder="What needs to be done?"/>
+                <span class="ToggleAllStatus floatLeft">&#171</span>                <input class="InputToDo floatLeft" id="Task" type="text"      placeholder="What needs to be done?"/>
             </div>
         </form>
  
         <ul class="TaskList">
-            <li class="TaskLine"><span class="TaskStatus">&#10003</span><span class="TaskDesc">first task</span>
+            <li class="TaskLine"><span class="toggle">&#10003</span><span class="TaskText">first task</span>
             </li>
-            <li class="TaskLine"><span class="TaskStatus">&#10003</span><span class="TaskDesc complete">A completed task </span>
+            <li class="TaskLine complete"><span class="toggle">&#10003</span><span class="TaskText">A completed task </span>
             </li>
         </ul> 
         
         <ul class="StatusElements">
-            <li class="NumActive">left</li>
-            <li class = "Categories">
+            <li class="NumActive floatLeft">left</li>
+            <li class = "Categories floatLeft">
                 <ul class = "Category">
-                    <li class = "ViewAll">All<li>
-                    <li class = "ViewActive">Active</li>
-                    <li class = "ViewCompleted">Completed</li>                 
+                    <li class = "ViewAll floatLeft">All<li>
+                    <li class = "ViewActive floatLeft">Active</li>
+                    <li class = "ViewCompleted floatLeft">Completed</li>                 
                 </ul>
                                      
             </li>                  
            
-            <li class="NumCompleted">complete</li>
+            <li class="NumCompleted floatLeft">complete</li>
         </ul>
         
     </section>
