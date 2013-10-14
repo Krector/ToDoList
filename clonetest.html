@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>the title</title>
+   <script type="text/javascript" 
+   src="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
+   <script type="text/javascript" language="javascript">
+   
+   $(document).ready(function() {
+/*
+     $("div").click(function () {
+//       $(this).clone().insertAfter(this);
+         $(this).clone().appendTo (".List");
+    });
+*/
+     $("div").click(function () {
+         $(".templates li").clone().appendTo (".List");
+    });
+
+   });
+
+   </script>
+   <style>
+      .div{ margin:10px;padding:12px;
+             border:2px solid #666;
+             width:60px;
+           }
+       .hide {display: none};
+  </style>
+</head>
+<body>
+   <p>Click on any square below to see the result:</p>
+   <div class="div" style="background-color:blue;"></div>
+   <div class="div" style="background-color:green;"></div>
+   <div class="div" style="background-color:red;"></div>
+
+    <div class="templates hide">
+        Templates!
+        <li class="TaskLine">
+            <span class="toggle">&#10003</span>
+            <span class="TaskText wide">New Task</span>
+        </li>
+      </div>
+    
+    <ul class="List">
+        <li>a list item</li>
+    </ul>
+</body>
+</html>

@@ -5,60 +5,70 @@
 <title>To Do List</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
-<!--<link rel="stylesheet" type="text/css" href="ToDo.css"> -->
-
-<link rel="stylesheet" type="text/css" href="ToDo2.css">
+<link rel="stylesheet" type="text/css" href="ToDo.css">
     
 </head>
     
 <body>
 
-     <h1 class="ListTitle">todos</h1>
+     <h1 class="ToDoTitle">todos</h1>
 
-    <section id="ToDoContainer">
+    <section id="ToDoContainer" class = "center">
         
-
-        <p class="InputLine"><span class="SelectAll">stuff</span>     
-        <span class="InputTask">What needs to be done?what happens here if there's more text than it can hold</span>
-                
-        </p>
-
-<!--        
-        <div class="InputLine">
-    
-            <div class="SelectAll">
-                <p>stuff</p>
-        
+            <div class="ListInput">
+                <span class="ToggleAllStatus center floatLeft">&#171</span><input class="InputTask wide" type="text" placeholder="What needs to be done?"/>
             </div>
+ 
+        <ul class="TaskList">
+<!--
+            <li class="TaskLine"><span class="toggle floatLeft">&#10003</span><span class="TaskText wide">first task</span>
+            </li>
+            <li class="TaskLine complete"><span class="toggle">&#10003</span><span class="TaskText wide">A completed task</span>
+            </li>
+-->
+        </ul> 
         
-            <div class="InputTask">
-                <p>What needs to be done?
-                </p>
-            </div>
-        </div>
--->    
-
-     <ul class="TaskLine">
-            <li class="TaskElement"><span class="TaskStatus">blah</span><span class="Task">first task</span></li>
-           <li class="TaskElement"><span class="TaskStatus">blah</span><span class="Task">A second task that is very long and an even longer class that takes up two rows</span></li>
-    </ul> 
-
-
+        <ul class="StatusElements">
+            <li class="NumActive floatLeft">left</li>
+            <li class = "Categories floatLeft">
+                <ul class = "Category">
+                    <li class = "ViewAll floatLeft">All<li>
+                    <li class = "ViewActive floatLeft">Active</li>
+                    <li class = "ViewCompleted floatLeft">Completed</li>                 
+                </ul>
+                                     
+            </li>                  
+           
+            <li class="NumCompleted floatLeft">complete</li>
+        </ul>
+        
     </section>
-    
-        <div class="StatusLine">
-            <ul class="StatusItems">
-                <li class="NumToDo">left</li>
-                <li class="ViewCategory">category</li>
-                <li class="NumCompleted">complete</li>
-            </ul>
         
-        </div>
-             
-   
-    <p id="Edit">Double click to edit a todo</p>
-    <p class="Author">Created by <a href="">James Thomas</a> and <a href="">Ed Chatelain</a></p>
-    <p class="Attrib">Part of <a href="">TodoMVC</a></p>
+    <footer class="ToDoListInfo">
+        <p id="Edit">Double click to edit a todo</p>
+        <p class="Author">Created by <a href="">James Thomas</a> and <a href="">Ed Chatelain</a></p>
+        <p class="Attrib">Part of <a href="">TodoMVC</a></p>
+    </footer>
+
+    <div class="templates hide">
+        Templates!
+        <li class="TaskLine">
+            <span class="toggle floatLeft">&#10003</span><span class="TaskText wide">New Task</span>
+        </li>
+      </div>
+    
+    <!-- Add links Jquery code, and the application JavaScript file
+     Invoke the JQuery Document.ready function,
+     Call the Application JavaScript Init function (this contains all the
+     bindings for the jQuery event handlers.
+-->
+    <script src ="http://codeorigin.jquery.com/jquery-2.0.3.js"></script>
+    <script src ="ToDo.js"></script>
+    <script>
+        $(document).ready(function (){
+            app.init();
+        })                     
+    </script>
     
 </body>
     

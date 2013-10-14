@@ -5,129 +5,127 @@ html {
 html {
     font: 1.3em Helvetica Neue, Helvetica, Arial, sans-serif;}
 
-p, ul, li, div, body {
+p, ul, li, div, body, input, h1, h2, h3, h4, h5 {
     margin: 0px;
     padding: 0px;
     }
 
-/*
-p {
-    font: 2em;
+
+.center {
+    margin-left: auto;
+    margin-right: auto; 
 }
-*/
-/* Title For List */
-h1.ListTitle {
+
+
+.floatLeft {
+    float: left;
+}
+
+.wide {
+    width: 502px !important;
+}
+
+.hide {
+    display: none;
+}
+
+#ToDoContainer {
+    width: 560px;
+    border-top: #92827a solid 16px;
+    box-shadow: 0px 0px 5px 5px #999, 0px 0px 5px 5px #999;
+    box-shadow: 6px 0px 2px #999, -6px 0px 2px #999;
+    overflow: hidden;'
+
+}
+
+.ToDoTitle {
     font-size: 3.3em;
     width: 50%;
     text-shadow: 4px 3px 0px rgba(0,0,0,0.2);
-        }
+    margin-bottom: 25px;
+ }
 
-/*Center Title text in page */
-h1.ListTitle, #Edit, .Author, .Attrib {
+.ToDoTitle, #Edit, .Author, .Attrib {
     text-align: center;
     margin-left: auto;
     Margin-right: auto;
 } 
 
-#Edit, .Author, .Attrib {
-    padding: 8px 0px;
-    font-size: .55em;
-    color: #c9c9c9;
-}
-
-#Edit a, .Author a, .Attrib a  {
-    color: #c9c9c9;
-}
-
-/* Main List Container */
-#ToDoContainer {
-    width: 560px;
-    margin-right: auto;
-    margin-left: auto;
-    border-top: #92827a solid 16px;
-    border-bottom: #c9c9c9 double 3px;
-    box-shadow: 0px 0px 5px 5px #999, 0px 0px 5px 5px #999;
-    box-shadow: 6px 0px 2px #999, -6px 0px 2px #999;
+.ToggleAllStatus {
+    transform:rotate(-90deg);
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg) ; /* Safari and Chrome */
+    font-size: 40px;
+    padding-right: 15px;
+    margin-left: -5px;
     
-   /* margin-bottom: 80px;*/
-    }
+}
 
-.SelectAll, .InputTask {
-    float: left;
+input{
+    padding: 15px 10px;
+    font-size: 22px;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    margin: none;
+
+}
+
+.InputTask {
+    border-left: red double 3px;
+}
+
+li.TaskLine {
+    border: #c9c9c9 dotted 1px;
+    font-size: 22px;
+}
+
+.TaskList {
+    color: #4d4d4d;
+	background-color: #fff;
+    clear: both;
+
+}
+
+.TaskList span {
+    display: inline-block;
+}
+
+.toggle {
+  padding: 15px 7px;
+    
+}
+
+.TaskText {
     padding: 15px 10px;
 }
-.SelectAll, .TaskStatus {
-    width: 5%;
+
+
+.TaskText {
+    border-left: red double 3px; 
 }
 
-.TaskStatus , .Task, .TaskElement{
-        padding: 15px 5px;
-}
-
-.ToDoContainer, .InputLine, .StatusLine {
-    overflow: hidden;
-    zoom: 1
-}
-
-.StatusLine{
+.StatusElements {
     width: 558px;
-    text-align: center;
+    color: #7c7c7c;
+    padding: 10px 0;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
-    border: #c9c9c9 solid 1px;
+    border: #92827a solid 2px;
+    border-top: #92827a solid 1px;
 }
 
-.StatusLine ul{
-    list-style-type: none;
-
-}
-
-.StatusLine li {
-    float: left;
-    width:172px;
-    padding: 5px;
-    margin: 2px;
-}
-
-.NumToDo {}
-
-
-.TaskLine {
-    list-style-type: none;
-    }
-
-.TaskElement {
-    padding: 15px 0;
-    background-color: #fff;
-    border: #c9c9c9 solid 1px;
-}
-
-.SelectAll p, .TaskStatus p{
-    Text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: .7em;
-}
-
-.InputTask, .Task {
-    border-left: #ff0000 double 4px;
-    width: 85%;
-}
-
-.InputTask p {
-    font-style: italic;
-}
-
-.InputLine{
-    border-bottom : 2px solid #c9c9c9;
+.StatusElements li {
+    width: 170px;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
 
-
-.Statusline {
-    list-style-type: none;
-    padding: 5px 0px;
+.Category li {
+    width: auto;
+    
 }
 
 .NumToDo {
@@ -138,3 +136,25 @@ h1.ListTitle, #Edit, .Author, .Attrib {
     text-align: right;
 }
 
+.ToDoListInfo p {
+    padding-top: 25px;
+    font-size: .58em;
+    color: #c9c9c9;
+}
+
+.ToDoListInfo a  {
+    color: #c9c9c9;
+}
+
+.StatusElements, .Categories, .Category {
+    list-style-type: none;
+}
+
+.complete .TaskText{
+    text-decoration: line-through;
+    color: #c9c9c9;
+}
+
+.complete .toggle {
+    color : green;
+}
