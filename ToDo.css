@@ -22,7 +22,7 @@ p, ul, li, div, body, input, h1, h2, h3, h4, h5 {
 }
 
 .wide {
-    width: 502px !important;
+    width: 502px;
 }
 
 .hide {
@@ -80,7 +80,7 @@ li.TaskLine {
     font-size: 22px;
 }
 
-.TaskList {
+.TaskList .TaskText {
     color: #4d4d4d;
 	background-color: #fff;
     clear: both;

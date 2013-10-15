@@ -21,7 +21,7 @@ var app = {
     * Register the required JQuery event callbacks
     */
     
-    init: function (){
+    init: function () {
         $(".InputTask").keypress(app.checkKeypress);
         $(".TaskList").on("click", ".toggle", app.toggleStatus);
         
@@ -30,6 +30,7 @@ var app = {
     checkKeypress : function(ev) {
        if (ev.which === 13){
            app.addTask();
+
        }
      },
     
@@ -39,26 +40,21 @@ var app = {
         var newTask = $(".templates li").clone();
         
         // Update the new task text with the input text
-//        var inputText= $(".InputTask").val();
-        newTask.find("span.TaskText").text( $(".InputTask").val());
-      // complete new item if needed
-/*
-        if(status === 'complete') {
-            newItem.addClass('complete');
-        }
-*/
-// append the new task to the list
+        newTask.find("span.TaskText").text( $(".InputTask").val());       
+
+        // Append the new task to the list
         newTask.appendTo(".TaskList");
+        
         // Blank out the task input
         $(".InputTask").val('');
-
-
-    },
-    
-    toggleStatus : function (ev) {
         
     },
     
+    toggleStatus : function(ev) {
+      $(ev.target).closest(".TaskLine").toggleClass("complete");
+        
+    },
+   
     editTask : function () {
     },
     
