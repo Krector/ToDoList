@@ -22,7 +22,7 @@ p, ul, li, div, body, input, h1, h2, h3, h4, h5 {
 }
 
 .wide {
-    width: 502px;
+    width: 480px;
 }
 
 .hide {
@@ -78,22 +78,27 @@ input{
 li.TaskLine {
     border: #c9c9c9 dotted 1px;
     font-size: 22px;
-}
-
-.TaskList .TaskText {
     color: #4d4d4d;
-	background-color: #fff;
+	background-color: #fdfdfd;
+    clear: both;
+
+}
+/*
+.TaskList{
+    color: #4d4d4d;
+	background-color: #fdfdfd;
     clear: both;
 
 }
 
+*/
 .TaskList span {
     display: inline-block;
 }
 
 .toggle {
-  padding: 15px 7px;
-    
+    padding: 15px 7px;
+    color: #c9c9c9;
 }
 
 .TaskText {
@@ -103,6 +108,19 @@ li.TaskLine {
 
 .TaskText {
     border-left: red double 3px; 
+}
+
+.TaskDelete {
+    color: #92827a;
+}
+
+.TaskDelete:hover {
+    color: red;
+
+}
+
+span.hide {
+    display: none;
 }
 
 .StatusElements {

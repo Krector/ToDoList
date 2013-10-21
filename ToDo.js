@@ -24,14 +24,18 @@ var app = {
     init: function () {
         $(".InputTask").keypress(app.checkKeypress);
         $(".TaskList").on("click", ".toggle", app.toggleStatus);
-        
+        $(".TaskList").on("dblclick", ".TaskText", app.editTask);
+        $(".TaskList").on("click", ".delete", app.deleteTask);
+        $(".TaskList").on("mouseenter mouseleave", app.toggleXDisplay);
     },
 
     checkKeypress : function(ev) {
-       if (ev.which === 13){
+        
+        //When the "Enter" key is input add the new task
+        if (ev.which === 13){
            app.addTask();
 
-       }
+        }
      },
     
     addTask : function () {
@@ -51,10 +55,20 @@ var app = {
     },
     
     toggleStatus : function(ev) {
-      $(ev.target).closest(".TaskLine").toggleClass("complete");
+        
+        // When the checkmark to left of task is clicked, toggle
+        // (add or remove) the complete class 
+        $(ev.target).closest(".TaskLine").toggleClass("complete");
         
     },
-   
+
+    toggleXDisplay : function(ev) {
+        // When the mouse enters or leaves a task line toggle display of
+        // the "delete" X
+        var deleteTask = $(ev.target).closest(".TaskLine");
+        deleteTask.find("span.TaskDelete").toggleClass("hide");
+    },
+    
     editTask : function () {
     },
     
