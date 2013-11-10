@@ -26,7 +26,7 @@ var app = {
         $(".TaskList").on("click", ".toggle", app.toggleStatus);
         $(".TaskList").on("dblclick", ".TaskText", app.editTask);
         $(".TaskList").on("click", ".delete", app.deleteTask);
-        $(".TaskList").on("mouseenter mouseleave", app.toggleXDisplay);
+        $(".TaskList").on("mouseenter mouseleave", "li", app.toggleXDisplay);
     },
 
     checkKeypress : function(ev) {
@@ -66,6 +66,7 @@ var app = {
         // When the mouse enters or leaves a task line toggle display of
         // the "delete" X
         var deleteTask = $(ev.target).closest(".TaskLine");
+ 
         deleteTask.find("span.TaskDelete").toggleClass("hide");
     },
     
