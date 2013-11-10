@@ -27,6 +27,7 @@ var app = {
         $(".TaskList").on("dblclick", ".TaskText", app.editTask);
         $(".TaskList").on("click", ".delete", app.deleteTask);
         $(".TaskList").on("mouseenter mouseleave", "li", app.toggleXDisplay);
+        $(".toggleAll").click(app.toggleAllStatus);   
     },
 
     checkKeypress : function(ev) {
@@ -62,6 +63,14 @@ var app = {
         
     },
 
+    toggleAllStatus : function() {
+        
+        // When the Chevron on the input line is clicked, toggle
+        // (add or remove) the complete class for all tasks
+        $('li.TaskLine').toggleClass("complete");
+        
+    },
+
     toggleXDisplay : function(ev) {
         // When the mouse enters or leaves a task line toggle display of
         // the "delete" X
@@ -74,9 +83,6 @@ var app = {
     },
     
     deleteTask : function () {
-    },
-    
-    toggleAllStatus : function () {
     },
     
     viewSelectedTasks : function (filterTask) {

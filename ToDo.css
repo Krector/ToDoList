@@ -51,7 +51,7 @@ p, ul, li, div, body, input, h1, h2, h3, h4, h5 {
     Margin-right: auto;
 } 
 
-.ToggleAllStatus {
+.toggleAll {
     transform:rotate(-90deg);
     -ms-transform: rotate(-90deg); /* IE 9 */
     -webkit-transform: rotate(-90deg) ; /* Safari and Chrome */
