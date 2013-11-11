@@ -25,7 +25,7 @@ var app = {
         $(".InputTask").keypress(app.checkKeypress);
         $(".TaskList").on("click", ".toggle", app.toggleStatus);
         $(".TaskList").on("dblclick", ".TaskText", app.editTask);
-        $(".TaskList").on("click", ".delete", app.deleteTask);
+        $(".TaskList").on("click", ".TaskDelete", app.deleteTask);
         $(".TaskList").on("mouseenter mouseleave", "li", app.toggleXDisplay);
         $(".toggleAll").click(app.toggleAllStatus);   
     },
@@ -80,9 +80,11 @@ var app = {
     },
     
     editTask : function () {
+        console.log ('edit task');
     },
     
-    deleteTask : function () {
+    deleteTask : function (ev) {
+       $(ev.target).closest(".TaskLine").remove();
     },
     
     viewSelectedTasks : function (filterTask) {
