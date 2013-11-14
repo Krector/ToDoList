@@ -53,6 +53,9 @@ var app = {
         // Blank out the task input
         $(".InputTask").val('');
         
+        //display the task list status line
+        $(".StatusElements").removeClass("hide");
+        
     },
     
     toggleStatus : function(ev) {

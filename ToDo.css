@@ -119,6 +119,18 @@ li.TaskLine {
 
 }
 
+.TaskLine.TaskText,
+.TaskLine input {
+  position: absolute;
+}
+
+.TaskLine input {
+  display: none;
+}
+.TaskLine.edit input {
+  display: inline;
+}
+
 span.hide {
     display: none;
 }
